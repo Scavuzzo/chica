@@ -56,6 +56,8 @@
   @include breakpoint('tablet') {
     display: flex;
     justify-content: right;
+    z-index: 1000;
+    margin-top: -60px;
     & img {
       aspect-ratio: 7/5;
     }
@@ -192,7 +194,7 @@
   
   @include breakpoint('desktop-lg') {
     gap: 0;
-    height: 100vh;
+    height: calc(100vh - 70px);
     padding-top: 60px;
     margin: 0;
     justify-content: center;

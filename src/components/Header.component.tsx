@@ -4,12 +4,13 @@ import type { } from '@mui/material/themeCssVarsAugmentation';
 import Link from 'next/link';
 import styles from 'styles/Header.module.scss'
 import { easeIn, motion, useScroll, useTransform } from 'framer-motion';
-import { useTheme } from '@mui/material';
+import { useTheme, useMediaQuery } from '@mui/material';
 import { ChicaLogo } from './Logos/Logos';
 import { BtnHamb } from './BtnHamb.component';
 
 const Header = () => {
   const theme = useTheme()
+  const mobile = useMediaQuery(theme.breakpoints.down('md'));
   const { scrollY } = useScroll()
   const zero = 0
   const max = 300
@@ -32,7 +33,9 @@ const Header = () => {
       </Link>
       <motion.div className={styles.NavIcons}>
         {/* <SwitchPaletteMode /> */}
-        <BtnHamb/>
+        {
+          mobile && <BtnHamb/>
+        }
       </motion.div>
     </motion.header>
   )
