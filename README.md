@@ -1,5 +1,7 @@
-# Boiler Static
+# Chica
 
 ## Descripción
 
-Boilerplate with React JS, Next JS, Typescript, Material UI, Framer Motion for static page.
+Chica website:
+
+www.chicakitchen.com
