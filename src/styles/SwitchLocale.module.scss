@@ -1,0 +1,26 @@
+.switchLocale {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 24px;
+    position: relative;
+}
+.selectedLocale{
+    display: flex;
+    height: fit-content;
+    margin: auto;
+    cursor: pointer;
+    font-size: 18px;
+}
+.dropdown{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    left: 0;
+}
+.icon {
+
+}

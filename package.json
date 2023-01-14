@@ -1,0 +1,49 @@
+{
+  "name": "nextjs-with-typescript",
+  "version": "5.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prettier": "prettier --check '**/*.{js,ts,tsx,html}'",
+    "prettier:fix": "prettier --check '**/*.{js,ts,tsx,html}' -w"
+  },
+  "dependencies": {
+    "@emotion/cache": "latest",
+    "@emotion/react": "latest",
+    "@emotion/server": "latest",
+    "@emotion/styled": "latest",
+    "@mui/icons-material": "latest",
+    "@mui/material": "latest",
+    "@mui/utils": "^5.11.2",
+    "@next/font": "latest",
+    "axios": "^1.2.2",
+    "framer-motion": "^8.2.0",
+    "i18next": "^22.4.6",
+    "luxon": "^3.2.0",
+    "next": "latest",
+    "next-i18next": "^13.0.2",
+    "next-themes": "^0.2.1",
+    "popmotion": "^11.0.5",
+    "react": "^18.0.0",
+    "react-dom": "latest",
+    "react-hook-form": "^7.41.2",
+    "react-i18next": "^12.1.1",
+    "react-number-format": "^4.9.3",
+    "sass": "^1.57.1",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@types/luxon": "^3.2.0",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "@typescript-eslint/parser": "^5.48.1",
+    "eslint": "^8.30.0",
+    "eslint-config-next": "latest",
+    "eslint-config-prettier": "^8.5.0",
+    "typescript": "latest"
+  }
+}

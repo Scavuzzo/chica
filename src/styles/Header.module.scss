@@ -1,0 +1,28 @@
+@import './mixins';
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 30px;
+    color: var(--mui-palette-text-primary);
+    background-color: var(--mui-palette-primary-main);
+}
+.NavIcons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    fill: var(--mui-palette-text-primary);
+    path: {
+        fill: var(--mui-palette-text-primary);;
+    }
+}
+.logo {
+    fill: var(--mui-palette-text-primary);
+    width: 70px;
+    display: flex;
+}

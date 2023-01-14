@@ -1,0 +1,275 @@
+@import './mixins';
+
+.container {
+  min-height: calc(100vh - 60px);
+  padding: 0;
+  @include breakpoint('phone'){
+    padding: 0 0 0 60px;
+  }
+}
+// ------------ HERO -------------
+.hero {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-top: -60px;
+  & > * {
+    flex: 1;
+  }
+}
+.heroImg {
+  width: 100%;
+  height: 100%;
+  max-height: 30vh;
+  object-fit: cover;
+  @include breakpoint('tablet'){
+    width: auto;
+    max-height: 35vh;
+  }
+}
+
+.heroTitle {
+  flex-grow: 1;
+  display: flex;
+  text-align: center;
+  padding-inline: 20px;
+  
+  & h1 {
+    font-size: 60px;
+    line-height: 62px;
+    margin: auto;
+    flex-basis: 240px;
+    @include breakpoint('phone'){
+      flex-basis: auto;
+      font-size: 80px;
+      line-height: 80px;
+    }
+    @include breakpoint('desktop-lg'){
+      font-size: 100px;
+      letter-spacing: 10px;
+    }
+  }
+}
+.heroImgUp {
+  flex-grow: 2;
+  width: 100%;
+  
+  @include breakpoint('tablet') {
+    display: flex;
+    justify-content: right;
+    & img {
+      aspect-ratio: 7/5;
+    }
+  }
+  
+  @include breakpoint('desktop-lg') {
+    & img {
+      margin-right: 130px;
+      max-height: 280px;
+      z-index: 1000;
+    }
+  }
+}
+
+.heroContainerDown {
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 2;
+}
+
+.heroImgDown {
+  width: 100%;
+  @include breakpoint('tablet') {
+    & img {
+      aspect-ratio: 16/9;
+    }
+  }
+  @include breakpoint('desktop-lg') {
+    max-height: 35vh;
+  }
+}
+
+.heroLogoDown {
+  @include breakpoint('tablet') {
+    width: 200px;
+    margin-right: 100px;
+  }
+}
+// ------------ /HERO -------------
+
+// ------------ ABOUT -------------
+.about {
+  width: 100vw;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  @media (min-width: 768px) {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  }
+  @media (min-width: 1200px) {
+  height: 100vh;
+  padding-top: 80px;
+  margin: 0;
+  gap: 100px;
+  }
+}
+.aboutImg {
+  img {
+    aspect-ratio: 6/4;
+    vertical-align: middle;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+.aboutImgDown {
+  img {
+    width: 100%;
+    max-height: 230px;
+    aspect-ratio: 3/6;
+    object-fit: cover;
+  }
+  @include breakpoint('desktop-xl'){
+    max-height: 350px;
+    img {max-height: 350px;}
+  }
+}
+.aboutTextContainer {
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+  @media (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 30px;
+  }
+}
+.aboutText {
+  padding-inline: 30px;
+  & > p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  @media (min-width: 768px) {
+    margin-bottom: 20px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 420px;
+    margin: auto;
+    & p {
+    font-size: 14px;
+    }
+  }
+}
+.aboutLogo {
+  width: 120px;
+  margin-bottom: 20px;
+  fill: var(--mui-palette-text-primary);
+  svg {
+    width: 100%;
+  }
+  @media (min-width: 1200px) {
+  width: 140px;
+  }
+}
+.aboutLogoImgContainer {
+  @include breakpoint('phone') {
+  width: 50%;
+  }
+}
+
+// CONTACT
+.contact {
+  width: 100vw;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  
+  @include breakpoint('phone') {
+    width: 100%;
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
+  
+  @include breakpoint('desktop-lg') {
+    gap: 0;
+    height: 100vh;
+    padding-top: 60px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+  }
+}
+
+.contactGridItem {
+  padding-top: 0;
+  width: 100%;
+
+  @include breakpoint('phone') {
+    width: 50%;
+  }
+
+  @include breakpoint('tablet') {
+    display: flex;
+  }
+
+  @include breakpoint('desktop-lg') {
+    justify-content: center;
+  }
+}
+
+.contactImg {
+  flex-basis: 500px;
+  & img {
+    aspect-ratio: 1/1;
+    vertical-align: middle;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.contactTextContainer {
+  width: 100%;
+  text-align: left;
+  height: auto;
+  padding-inline: 30px;
+  margin-bottom: 20px;
+
+  & p {
+    line-height: 24px;
+    text-decoration: none;
+    color: var(--mui-palette-text-primary);
+  }
+
+  @include breakpoint('tablet') {
+    max-width: 500px;
+    padding-inline: 0;
+
+    & p {
+      line-height: 34px;
+    }
+  }
+}
+
+.contactIframeContainer {
+  width: 100%;
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+
+  & iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include breakpoint('tablet') {
+    padding-top: 60%;
+  }
+}

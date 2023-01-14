@@ -1,0 +1,36 @@
+@import './mixins';
+
+.root {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    padding-inline: 30px;
+
+    @include breakpoint('phone') {
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+}
+  
+.logo {
+    svg {
+        width: 60px;
+        fill: var(--mui-palette-text-primary);
+    }
+}
+  
+.social {
+    display: flex;
+    justify-content: space-evenly;
+    & > a {
+        display: flex;
+        margin: 0 .5rem;
+        & > * {
+        font-size: 26px;
+        margin: 2px;
+        }
+    }
+}
