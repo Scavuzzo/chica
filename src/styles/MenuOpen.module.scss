@@ -1,0 +1,73 @@
+.root {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  z-index: 9;
+  background: var(--mui-palette-primary-main);
+}
+.container {
+    width: 60vw;
+    margin: auto;
+    padding-top: 60px;
+    & a {
+        margin: auto;
+        color: var(--mui-palette-text-primary);
+        text-decoration: none;
+    }
+}
+
+.nav {
+display: flex;
+align-items: center;
+justify-content: center;
+text-transform: uppercase;
+padding-bottom: 1.4rem;
+border-bottom: 1px solid var(--mui-palette-text-primary);
+gap: 0.8rem;
+}
+
+.link {
+color: var(--mui-palette-text-primary);
+font-weight: 600;
+font-size: 2rem;
+line-height: 4rem;
+text-decoration: none;
+letter-spacing: 2px;
+}
+
+.logo {
+width: 120px;
+height: auto;
+margin: 0 auto 2rem;
+& path {
+    fill: var(--mui-palette-text-primary);
+}
+}
+
+.phone {
+margin: 2.4rem 0;
+font-size: 18px;
+}
+
+.social {
+display: flex;
+margin: auto;
+justify-content: space-evenly;
+& > div {
+    display: flex;
+    background: var(--mui-palette-text-primary);
+    color: var(--mui-palette-primary-main);
+    margin: 0 .5rem;
+    & a {
+    color: var(--mui-palette-text-secondary);
+    display: flex;
+    & > * {
+        font-size: 36px;
+        margin: 4px;
+    }
+    }
+}
+}
+

@@ -1,12 +1,13 @@
 {
-  "name": "nextjs-with-typescript",
-  "version": "5.0.0",
+  "name": "chica",
+  "version": "0.0.4",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "sitemap": "next-sitemap",
     "prettier": "prettier --check '**/*.{js,ts,tsx,html}'",
     "prettier:fix": "prettier --check '**/*.{js,ts,tsx,html}' -w"
   },
@@ -25,6 +26,7 @@
     "luxon": "^3.2.0",
     "next": "latest",
     "next-i18next": "^13.0.2",
+    "next-sitemap": "^3.1.45",
     "next-themes": "^0.2.1",
     "popmotion": "^11.0.5",
     "react": "^18.0.0",

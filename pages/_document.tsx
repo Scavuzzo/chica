@@ -9,12 +9,36 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="es">
+      <Html lang="es" style={{ scrollBehavior: 'smooth' }}>
         <Head>
           {/* PWA primary color */}
           {/* <meta name="theme-color" content={theme.palette.primary.main} /> */}
           <link rel="shortcut icon" href="/favicon.ico" />
           <meta name="emotion-insertion-point" content="" />
+          <link rel="canonical" href="https://chicakitchen.com/" />
+          <meta name="robots" content="index, follow" />
+          <meta property='og:type' content='website'/>
+          <meta property='og:title'content='Chica' />
+          <meta property="og:description" content="Café, Cocina y Cócteles de autor." />
+          {/* <meta property="og:image" content="https://example.com/images/cool-page.jpg" /> */}
+          <meta name="description" content="Café, cocina vegana/vegetariana y cocktelería de autor en la ciudad de Rosario"/>
+          <script type="application/ld+json">
+            {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Chica",
+              "url": "https://chicakitchen.com",
+              "logo": "https://chicakitchen.com/circle-logo.webp",
+              "sameAs": [
+                "https://www.facebook.com/chicakittchen",
+                "https://twitter.com/chicakittchen",
+                "https://www.linkedin.com/company/chica-kitchen/?originalSubdomain=ar"
+                "https://www.instagram.com/chicakittchen/"
+              ]
+            }
+          `}
+          </script>
           {(this.props as any).emotionStyleTags}
         </Head>
         <body className={ramaGothic.className}>

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://chicakitchen.com
+
+# Sitemaps
+Sitemap: https://chicakitchen.com/sitemap.xml

@@ -11,8 +11,7 @@
 .hero {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  margin-top: -60px;
+  min-height: calc(100vh - 60px);
   & > * {
     flex: 1;
   }

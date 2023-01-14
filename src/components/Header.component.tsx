@@ -6,6 +6,7 @@ import styles from 'styles/Header.module.scss'
 import { easeIn, motion, useScroll, useTransform } from 'framer-motion';
 import { useTheme } from '@mui/material';
 import { ChicaLogo } from './Logos/Logos';
+import { BtnHamb } from './BtnHamb.component';
 
 const Header = () => {
   const theme = useTheme()
@@ -30,7 +31,8 @@ const Header = () => {
         <ChicaLogo />
       </Link>
       <motion.div className={styles.NavIcons}>
-        <SwitchPaletteMode />
+        {/* <SwitchPaletteMode /> */}
+        <BtnHamb/>
       </motion.div>
     </motion.header>
   )
