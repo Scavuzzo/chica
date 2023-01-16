@@ -8,6 +8,7 @@ import { ViewProvider } from 'contexts/view.context';
 import { Layout } from 'components/Layout.component';
 import { StyledEngineProvider } from '@mui/material';
 import { AnimatePresence } from 'framer-motion';
+import Script from 'next/script';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -23,6 +24,21 @@ const MyApp = (props: MyAppProps): JSX.Element => {
         <Head>
           <meta name="viewport" content="initial-scale=1, width=device-width" />
         </Head>
+        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-LPGVJYHSM2" />
+        <Script
+          id='google-analytics'
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-LPGVJYHSM2', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+      />
         <AppThemeProvider>
           <ViewProvider>
             <Layout>
