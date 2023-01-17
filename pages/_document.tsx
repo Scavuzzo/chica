@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
           <meta property='og:type' content='website'/>
           <meta property='og:title'content='Chica' />
           <meta property="og:description" content="Café, Cocina y Cócteles de autor." />
-          {/* <meta property="og:image" content="https://example.com/images/cool-page.jpg" /> */}
+          <meta property="og:image" content="https://chicakitchen.com/home-about2.jpg" />
           <meta name="description" content="Café, cocina vegana/vegetariana y cocktelería de autor en la ciudad de Rosario"/>
           <script type="application/ld+json">
             {`
@@ -31,8 +31,6 @@ export default class MyDocument extends Document {
               "url": "https://chicakitchen.com",
               "logo": "https://chicakitchen.com/circle-logo.webp",
               "sameAs": [
-                "https://www.facebook.com/chicakittchen",
-                "https://twitter.com/chicakittchen",
                 "https://www.linkedin.com/company/chica-kitchen/?originalSubdomain=ar"
                 "https://www.instagram.com/chicakittchen/"
               ]

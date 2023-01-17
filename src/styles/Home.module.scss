@@ -42,10 +42,14 @@
       flex-basis: auto;
       font-size: 80px;
       line-height: 80px;
+      letter-spacing: 6px;
     }
     @include breakpoint('desktop-lg'){
-      font-size: 100px;
+      font-size: 90px;
       letter-spacing: 10px;
+    }
+    @include breakpoint('desktop-xl'){
+      font-size: 100px;
     }
   }
 }
@@ -66,8 +70,12 @@
   @include breakpoint('desktop-lg') {
     & img {
       margin-right: 130px;
-      max-height: 280px;
       z-index: 1000;
+    }
+  }
+    @include breakpoint('desktop-xl') {
+    & img {
+      max-height: 280px;
     }
   }
 }
@@ -103,12 +111,12 @@
   width: 100vw;
   margin-top: 30px;
   margin-bottom: 30px;
-  @media (min-width: 768px) {
+  @include breakpoint('phone') {
   display: flex;
   gap: 30px;
   width: 100%;
   }
-  @media (min-width: 1200px) {
+  @include breakpoint('desktop-lg') {
   height: 100vh;
   padding-top: 80px;
   margin: 0;
@@ -136,10 +144,10 @@
   }
 }
 .aboutTextContainer {
-  @media (min-width: 768px) {
+  @include breakpoint('tablet') {
     width: 50%;
   }
-  @media (min-width: 1200px) {
+  @include breakpoint('desktop-lg') {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -151,14 +159,22 @@
   & > p:not(:last-child) {
     margin-bottom: 20px;
   }
-  @media (min-width: 768px) {
+  @include breakpoint('tablet') {
     margin-bottom: 20px;
   }
-  @media (min-width: 1200px) {
+  @include breakpoint('desktop-lg') {
     max-width: 420px;
     margin: auto;
     & p {
     font-size: 14px;
+    }
+  }
+  @include breakpoint('desktop-xl') {
+    // AGREGAR A TODAS LAS BODY
+    & p {
+      font-size: 17px;
+      letter-spacing: 0.3px;
+      line-height: 27px;
     }
   }
 }
@@ -169,13 +185,17 @@
   svg {
     width: 100%;
   }
-  @media (min-width: 1200px) {
+  @include breakpoint('desktop-lg') {
   width: 140px;
   }
 }
 .aboutLogoImgContainer {
   @include breakpoint('phone') {
-  width: 50%;
+    width: 50%;
+  }
+  @include breakpoint('desktop-xl') {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -221,12 +241,15 @@
 }
 
 .contactImg {
-  flex-basis: 500px;
+  flex-basis: 450px;
   & img {
     aspect-ratio: 1/1;
     vertical-align: middle;
     object-fit: cover;
     width: 100%;
+  }
+  @include breakpoint('desktop-xl'){
+    flex-basis: 600px;
   }
 }
 
@@ -244,7 +267,15 @@
   }
 
   @include breakpoint('tablet') {
-    max-width: 500px;
+    max-width: 450px;
+    padding-inline: 0;
+
+    & p {
+      line-height: 34px;
+    }
+  }
+  @include breakpoint('desktop-xl') {
+    max-width: 600px;
     padding-inline: 0;
 
     & p {

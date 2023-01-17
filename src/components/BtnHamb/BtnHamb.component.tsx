@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { ViewContext } from 'contexts/view.context';
 import { LazyMotion, domAnimation, m, Variants } from 'framer-motion';
 import { css } from '@mui/material';
-import { MenuOpen } from 'components/MenuOpen.component';
+import { MenuOpen } from 'components/BtnHamb/MenuOpen.component';
 
 interface BtnHambProps {
   open?: boolean;

@@ -3,12 +3,12 @@
 .root {
   width: 100vw;
   margin-bottom: 30px;
-  @media (min-width: 768px) {
+  @include breakpoint('tablet') {
       width: 100%;
       display: flex;
       gap: 20px;
     }
-    @media (min-width: 1200px) {
+    @include breakpoint('desktop-lg') {
         height: 100vh;
         justify-content: center;
         align-items: center;
@@ -29,29 +29,29 @@
         object-fit: cover;
         position: absolute;
         }
-    @media (min-width: 768px) {
+    @include breakpoint('tablet') {
         flex-basis: 400px;
         max-height: 400px;
     }
-    @media (min-width: 1200px) {
+    @include breakpoint('desktop-lg') {
+        flex-basis: 450px;
+        max-height: 450px;
         margin-left: auto;
         margin-bottom: 0;
-        flex-basis: 500px;
-        max-height: 500px;
         padding-inline: 0;
     }
     @include breakpoint('desktop-xl'){
-        flex-basis: 650px;
-        max-height: 650px;
+        flex-basis: 600px;
+        max-height: 600px;
     }
 }
 .imgContainer {
     display: flex;
     min-height: 100%;
-    @media (min-width: 768px) {
+    @include breakpoint('tablet') {
         max-width: 50%;
     }
-    @media (min-width: 1200px) {
+    @include breakpoint('desktop-lg') {
         flex: 1;
         align-items: center;
     }
@@ -62,13 +62,13 @@
 }
 .textContainer {
   padding-inline: 30px;
-  @media (min-width: 768px) {
+  @include breakpoint('tablet') {
     max-width: 50%;
   }
-  @media (min-width: 1200px) {
+  @include breakpoint('desktop-lg') {
     padding-inline: 0;
     flex: 1;
-    height: 500px;
+    height: 450px;
     h2 {
     max-width: 130px;
     }
@@ -78,7 +78,7 @@
     }
   }
   @include breakpoint('desktop-xl'){
-    height: 650px;
+    height: 600px;
   }
 }
 .paragraph {

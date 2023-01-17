@@ -1,0 +1,36 @@
+@import './mixins';
+
+.btn {
+  display: inline-block;
+  color: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  border-radius: 50%;
+  padding-block: 0.2em;
+  padding-inline: 0.7em;
+  letter-spacing: 0.07em;
+  font-weight: bolder;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .4s ease;
+  border: 2px solid var(--mui-palette-text-primary);
+  &:hover{
+    background-color: var(--mui-palette-text-primary);
+    color: var(--mui-palette-primary-main);
+  }
+  @include breakpoint('desktop-xl') {
+    padding: 16px;
+    font-size: 20px;
+  }
+}
+
+.btnNav {
+  display: inline-block;
+  color: inherit;
+  background: transparent;
+  border-radius: 50%;
+  padding: 20px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all .4s ease;
+}

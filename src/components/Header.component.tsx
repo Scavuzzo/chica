@@ -6,7 +6,8 @@ import styles from 'styles/Header.module.scss'
 import { easeIn, motion, useScroll, useTransform } from 'framer-motion';
 import { useTheme, useMediaQuery } from '@mui/material';
 import { ChicaLogo } from './Logos/Logos';
-import { BtnHamb } from './BtnHamb.component';
+import { BtnHamb } from './BtnHamb/BtnHamb.component';
+import MenuNav from './MenuNav.component';
 
 const Header = () => {
   const theme = useTheme()
@@ -35,6 +36,9 @@ const Header = () => {
         {/* <SwitchPaletteMode /> */}
         {
           mobile && <BtnHamb/>
+        }
+        {
+          !mobile && <MenuNav/>
         }
       </motion.div>
     </motion.header>
