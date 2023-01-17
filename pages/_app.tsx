@@ -9,6 +9,7 @@ import { Layout } from 'components/Layout.component';
 import { StyledEngineProvider } from '@mui/material';
 import { AnimatePresence } from 'framer-motion';
 import Script from 'next/script';
+import 'styles/globals.css'
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -23,6 +24,7 @@ const MyApp = (props: MyAppProps): JSX.Element => {
       <CacheProvider value={emotionCache}>
         <Head>
           <meta name="viewport" content="initial-scale=1, width=device-width" />
+          <link rel="stylesheet" href="styles/global.css" />
         </Head>
         <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-LPGVJYHSM2" />
         <Script

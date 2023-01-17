@@ -3,19 +3,26 @@
 .root {
   width: 100vw;
   margin-bottom: 30px;
-  @include breakpoint('tablet') {
+  @include breakpoint('phone') {
       width: 100%;
+      margin-bottom: 40px;
       display: flex;
       gap: 20px;
+  }
+  @include breakpoint('phone') {
+      // display: flex;
+      // gap: 20px;
+      margin-block: 60px;
     }
     @include breakpoint('desktop-lg') {
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-        padding: 60px 0 0;
-        margin-bottom: 0;
-        gap: 50px;
-    }
+      margin-block: 0;
+      height: 100vh;
+      margin-bottom: 0;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 0 0;
+      gap: 50px;
+  }
 }
 .img {
     width: 100vw;
@@ -29,6 +36,10 @@
         object-fit: cover;
         position: absolute;
         }
+    @include breakpoint('phone'){
+      flex-basis: 300px;
+      max-height: 300px;
+    }
     @include breakpoint('tablet') {
         flex-basis: 400px;
         max-height: 400px;
@@ -48,7 +59,7 @@
 .imgContainer {
     display: flex;
     min-height: 100%;
-    @include breakpoint('tablet') {
+    @include breakpoint('phone') {
         max-width: 50%;
     }
     @include breakpoint('desktop-lg') {
@@ -62,6 +73,9 @@
 }
 .textContainer {
   padding-inline: 30px;
+  @include breakpoint('phone'){
+    padding-inline: 10px;
+  }
   @include breakpoint('tablet') {
     max-width: 50%;
   }
@@ -79,6 +93,11 @@
   }
   @include breakpoint('desktop-xl'){
     height: 600px;
+    & p {
+      font-size: 17px;
+      letter-spacing: 0.3px;
+      line-height: 27px;
+    }
   }
 }
 .paragraph {

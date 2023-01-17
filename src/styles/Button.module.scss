@@ -8,7 +8,7 @@
   border-radius: 50%;
   padding-block: 0.2em;
   padding-inline: 0.7em;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.08em;
   font-weight: bolder;
   text-decoration: none;
   text-transform: uppercase;
@@ -19,7 +19,6 @@
     color: var(--mui-palette-primary-main);
   }
   @include breakpoint('desktop-xl') {
-    padding: 16px;
     font-size: 20px;
   }
 }

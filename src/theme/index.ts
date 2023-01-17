@@ -1,7 +1,7 @@
 import { Barlow } from '@next/font/google';
 import localFont from '@next/font/local'
-import { css } from '@mui/material';
-import { experimental_extendTheme as extendTheme } from '@mui/material';
+import { css, withStyles } from '@mui/material';
+import { experimental_extendTheme as extendTheme, responsiveFontSizes } from '@mui/material';
 
 export const barlow = Barlow({
   weight: ['200', '300', '400', '500', '700'],
@@ -17,6 +17,10 @@ export const ramaGothic = localFont({
 
 export const RAMA_GOTHIC = ramaGothic.style.fontFamily;
 export const BARLOW = barlow.style.fontFamily;
+
+export const globalStyles = css`
+
+`
 
 export const theme = extendTheme({
   colorSchemes: {
@@ -234,6 +238,4 @@ export const theme = extendTheme({
   spacing: [20]
 })
 
-export const globalStyles = css`
-
-`
+export default theme;

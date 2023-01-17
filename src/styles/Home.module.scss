@@ -4,6 +4,9 @@
   min-height: calc(100vh - 60px);
   padding: 0;
   @include breakpoint('phone'){
+    padding: 0 60px;
+  }
+  @include breakpoint('tablet'){
     padding: 0 0 0 60px;
   }
 }
@@ -112,11 +115,15 @@
   margin-top: 30px;
   margin-bottom: 30px;
   @include breakpoint('phone') {
-  display: flex;
-  gap: 30px;
-  width: 100%;
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 60px;
+    margin-top: 60px;
   }
   @include breakpoint('desktop-lg') {
+  margin-top: 30px;
+  margin-bottom: 30px;
   height: 100vh;
   padding-top: 80px;
   margin: 0;
@@ -144,7 +151,7 @@
   }
 }
 .aboutTextContainer {
-  @include breakpoint('tablet') {
+  @include breakpoint('phone') {
     width: 50%;
   }
   @include breakpoint('desktop-lg') {

@@ -175,7 +175,7 @@ export default function Home(cafe: BlockProps) {
               <Typography variant='body2'>
                 San Martín 834, Rosario, Santa Fe.
               </Typography>
-              <Typography variant='body2'>Galería Nación - Local 16</Typography>
+              <Typography variant='body2'>Galería Pasaje de la Nación - Local 16</Typography>
               <a href='tel:+5493416696995'>
                 <Typography variant='body2'> +54 9 341 669 6995 </Typography>
               </a>

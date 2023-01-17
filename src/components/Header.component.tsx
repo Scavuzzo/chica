@@ -11,11 +11,11 @@ import MenuNav from './MenuNav.component';
 
 const Header = () => {
   const theme = useTheme()
-  const mobile = useMediaQuery(theme.breakpoints.down('md'));
-  const { scrollY } = useScroll()
+  const mobile = useMediaQuery(theme.breakpoints.down('lg'));
+  const { scrollY, scrollYProgress} = useScroll()
   const zero = 0
   const max = 300
-  const min = 150
+  const min = 50
   const height = useTransform(
     scrollY,
     [min, max],
@@ -41,6 +41,7 @@ const Header = () => {
           !mobile && <MenuNav/>
         }
       </motion.div>
+      <motion.span style={{ scaleY: scrollYProgress }} className={styles.scrollbar} />      
     </motion.header>
   )
 }

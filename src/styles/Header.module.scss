@@ -26,3 +26,16 @@
     width: 70px;
     display: flex;
 }
+.scrollbar {
+    display: none;
+    @include breakpoint('phone'){
+        display: inline;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 10px;
+        background: var(--mui-palette-text-primary);
+        transform-origin: top left;
+    }
+}
