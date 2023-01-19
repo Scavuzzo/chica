@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Head from 'next/head'
 import styles from 'styles/Home.module.scss'
 import { useTranslation } from 'next-i18next'
@@ -8,7 +7,6 @@ import Typography from '@mui/material/Typography';
 import { domAnimation, LazyMotion, m, Variants } from 'framer-motion';
 import { KitchenLogo } from 'components/Logos/Logos';
 import Block from 'components/Block.component';
-import axios from 'axios'
 import { BlockProps } from '../src/components/Block.component';
 
 export async function getStaticProps({ locale }:any) {
@@ -91,6 +89,7 @@ export default function Home(cafe: BlockProps) {
                 initial='initial'
                 animate='animate'
                 transition={transition}
+                alt='Chica Producto 1'
               />
             </div>
             {
@@ -102,6 +101,9 @@ export default function Home(cafe: BlockProps) {
                 initial='initial'
                 animate='animate'
                 transition={transition}
+                height={200}
+                width={200}
+                alt='Chica Logo'
               />
             }
           </div>
@@ -131,7 +133,7 @@ export default function Home(cafe: BlockProps) {
               </Typography>
             </div>
             <div className={styles.aboutImgDown}>
-              {notTablet && <img src='/home-about1.jpg' />}
+              {notTablet && <img src='/home-about1.jpg' alt='Chica Local 2' />}
             </div>
           </div>
           {notMobile &&
@@ -142,21 +144,21 @@ export default function Home(cafe: BlockProps) {
                   <KitchenLogo />
                 </div>
                 <div className={styles.aboutImg}>
-                  <img src='/home-about2.jpg' />
+                  <img src='/home-about2.jpg' alt='Chica Local 3' />
                 </div>
               </Stack>
             </div>
           }
         </div>
         {/* BLOCKS */}
-        <Block title={t('block:cafeTitle')} text={t('block:cafeText')} images={cafeImages}/>
-        <Block title={t('block:cocinaTitle')} text={t('block:cocinaText')} images={cocinaImages}/>
-        <Block title={t('block:cocktailTitle')} text={t('block:cocktailText')} images={cocktailImages}/>
+        <Block title={t('block:cafeTitle')} text={t('block:cafeText')} images={cafeImages} alt='Café de especialidad' />
+        <Block title={t('block:cocinaTitle')} text={t('block:cocinaText')} images={cocinaImages} alt='Cocina vegana, vegetariana' />
+        <Block title={t('block:cocktailTitle')} text={t('block:cocktailText')} images={cocktailImages} alt='Cócteles de autor' />
         {/* CONTACT */}
         <div className={styles.contact} id='visitanos'>
           <div className={styles.contactGridItem} >
             <div className={styles.contactImg}>
-              <img src='/home-contact1.jpg' alt='' />
+              <img src='/home-contact1.jpg' alt='Chica Local 4' />
             </div>
           </div>
           <div className={styles.contactGridItem} >

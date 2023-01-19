@@ -9,9 +9,10 @@ export interface BlockProps {
     subtitle?: string,
     text?: string,
     images?: string[]
+    alt?: string
 }
 
-const Block = ({ title, subtitle, text, images }: BlockProps) => {
+const Block = ({ title, subtitle, text, images, alt }: BlockProps) => {
     const [pagination, setPagination] = useState(0)
     const imageIndex = wrap(0, images.length, pagination)
     
@@ -51,7 +52,7 @@ const Block = ({ title, subtitle, text, images }: BlockProps) => {
                             <m.img 
                                 key={pagination}
                                 src={images[imageIndex]}
-                                alt='Café de especialidad'
+                                alt={alt}
                                 variants={variants}
                                 initial='initial'
                                 animate='animate'
