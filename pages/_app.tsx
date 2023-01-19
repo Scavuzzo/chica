@@ -46,7 +46,7 @@ const MyApp = (props: MyAppProps): JSX.Element => {
             <Layout>
               <StyledEngineProvider injectFirst>
                 {/* Your component tree. Now you can override MUI's styles. */}
-                <AnimatePresence mode="wait" initial={false}>
+                <AnimatePresence>
                   <Component {...pageProps} />
                 </AnimatePresence>
               </StyledEngineProvider>

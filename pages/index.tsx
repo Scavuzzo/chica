@@ -26,6 +26,19 @@ export async function getInitialProps() {
     }
   }
 }
+const transition = { type: 'tween', duration: .6 };
+const imgUp: Variants = {
+  initial: { right: '-40vw', opacity: 0 },
+  animate: { right: 0,opacity: 1 }
+}
+const imgDown: Variants = {
+  initial: { left: '-40vw', opacity: 0 },
+  animate: { left: 0,opacity: 1 }
+}
+export const text: Variants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { type: 'tween', duration: .3 } }
+}
 
 export default function Home(cafe: BlockProps) {
   const { t } = useTranslation()
@@ -36,18 +49,6 @@ export default function Home(cafe: BlockProps) {
   const cocinaImages = ['/block-cocina1.jpg', '/block-cocina2.jpg', '/block-cocina3.jpg']
   const cocktailImages = ['/block-cocktail1.jpg', '/block-cocktail2.jpg', '/block-cocktail3.jpg']
 
-  const transition = { type: 'tween', duration: 1, delay: 1.2 };
-  const variants: Variants = {
-    initial: {
-      opacity: 0,
-      transition: {
-        delay: 500
-      }
-    },
-    animate: {
-      opacity: 1,
-    },
-  };
 
   return (
     <div className={styles.container}>
@@ -65,7 +66,7 @@ export default function Home(cafe: BlockProps) {
             <m.img
               className={styles.heroImg}
               src='/home-hero1.jpg'
-              variants={variants}
+              variants={imgUp}
               initial='initial'
               animate='animate'
               transition={transition}
@@ -73,19 +74,18 @@ export default function Home(cafe: BlockProps) {
           </div>
           <m.div
             className={styles.heroTitle}
-            variants={variants}
+            variants={text}
             initial='initial'
             animate='animate'
-            transition={transition}
           >
-            <h1 >CAFÉ, COCINA Y CÓCTELES</h1>
+            <h1>CAFÉ, COCINA Y CÓCTELES</h1>
           </m.div>
           <div className={styles.heroContainerDown}>
             <div className={styles.heroImgDown}>
               <m.img
                 className={styles.heroImg}
                 src='/home-hero2.jpg'
-                variants={variants}
+                variants={imgDown}
                 initial='initial'
                 animate='animate'
                 transition={transition}
@@ -97,10 +97,9 @@ export default function Home(cafe: BlockProps) {
               <m.img
                 className={styles.heroLogoDown}
                 src='/circle-logo.webp'
-                variants={variants}
+                variants={text}
                 initial='initial'
                 animate='animate'
-                transition={transition}
                 height={200}
                 width={200}
                 alt='Chica Logo'

@@ -1,19 +1,17 @@
-import { SwitchPaletteMode } from 'components/SwitchMode/SwitchMode.component'
-import { SwitchLocale } from './SwitchLocale/SwitchLocale.component';
 import type { } from '@mui/material/themeCssVarsAugmentation';
 import Link from 'next/link';
 import styles from 'styles/Header.module.scss'
-import { easeIn, motion, useScroll, useTransform } from 'framer-motion';
+import { domAnimation, LazyMotion, useScroll, useTransform, m } from 'framer-motion';
 import { useTheme, useMediaQuery } from '@mui/material';
 import { ChicaLogo } from './Logos/Logos';
 import { BtnHamb } from './BtnHamb/BtnHamb.component';
 import MenuNav from './MenuNav.component';
+import { text } from '../../pages/index';
 
 const Header = () => {
   const theme = useTheme()
   const mobile = useMediaQuery(theme.breakpoints.down('lg'));
   const { scrollY, scrollYProgress} = useScroll()
-  const zero = 0
   const max = 350
   const min = 150
   const height = useTransform(
@@ -28,21 +26,30 @@ const Header = () => {
   )
 
   return (
-    <motion.header className={styles.header} style={{ height, boxShadow }}>
-      <Link href='/' className={styles.logo}>
-        <ChicaLogo />
-      </Link>
-      <motion.div className={styles.NavIcons}>
-        {/* <SwitchPaletteMode /> */}
-        {
-          mobile && <BtnHamb/>
-        }
-        {
-          !mobile && <MenuNav/>
-        }
-      </motion.div>
-      <motion.span style={{ scaleY: scrollYProgress }} className={styles.scrollbar} />      
-    </motion.header>
+    <LazyMotion features={domAnimation}>
+      <m.header className={styles.header} style={{ height, boxShadow }}>
+        <Link href='/' className={styles.logo}>
+          <m.div 
+            style={{all: 'inherit'}}
+            initial='initial'
+            animate='animate'
+            variants={text}
+          >
+            <ChicaLogo />
+          </m.div>
+        </Link>
+        <m.div className={styles.NavIcons}>
+          {/* <SwitchPaletteMode /> */}
+          {
+            mobile && <BtnHamb/>
+          }
+          {
+            !mobile && <MenuNav/>
+          }
+        </m.div>
+        <m.span style={{ scaleY: scrollYProgress }} className={styles.scrollbar} />      
+      </m.header>
+    </LazyMotion>
   )
 }
 

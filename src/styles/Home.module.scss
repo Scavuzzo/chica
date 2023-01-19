@@ -24,6 +24,7 @@
   height: 100%;
   max-height: 30vh;
   object-fit: cover;
+  position: relative;
   @include breakpoint('tablet'){
     width: auto;
     max-height: 35vh;
@@ -63,7 +64,7 @@
   @include breakpoint('tablet') {
     display: flex;
     justify-content: right;
-    z-index: 1000;
+    z-index: 10;
     margin-top: -60px;
     & img {
       aspect-ratio: 7/5;
@@ -73,7 +74,6 @@
   @include breakpoint('desktop-lg') {
     & img {
       margin-right: 130px;
-      z-index: 1000;
     }
   }
     @include breakpoint('desktop-xl') {
