@@ -14,8 +14,8 @@ const Header = () => {
   const mobile = useMediaQuery(theme.breakpoints.down('lg'));
   const { scrollY, scrollYProgress} = useScroll()
   const zero = 0
-  const max = 300
-  const min = 50
+  const max = 350
+  const min = 150
   const height = useTransform(
     scrollY,
     [min, max],
