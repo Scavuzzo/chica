@@ -58,15 +58,6 @@ export default function Home(cafe: BlockProps) {
         <meta name="theme-color" content={theme.palette.primary.main} />
         <meta name="description" content="Chica, café de especialidad, cocina vegana y vegetariana, cócteles de autor. Petfriendly. Rosario, Santa Fe, Argentina." />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preload" as="image" href="block-cafe1.jpg" />
-        <link rel="preload" as="image" href="block-cafe2.jpg" />
-        <link rel="preload" as="image" href="block-cafe3.jpg" />
-        <link rel="preload" as="image" href="block-cocina1.jpg" />
-        <link rel="preload" as="image" href="block-cocina2.jpg" />
-        <link rel="preload" as="image" href="block-cocina3.jpg" />
-        <link rel="preload" as="image" href="block-cocktail1.jpg" />
-        <link rel="preload" as="image" href="block-cocktail2.jpg" />
-        <link rel="preload" as="image" href="block-cocktail3.jpg" />
       </Head>
       {/* HERO */}
       <LazyMotion features={domAnimation}>
