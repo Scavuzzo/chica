@@ -3,6 +3,8 @@ import styles from 'styles/Block.module.scss'
 import Typography from '@mui/material/Typography';
 import { LazyMotion, m, domAnimation, AnimatePresence, Variants } from 'framer-motion';
 import { wrap } from 'popmotion'
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 
 export interface BlockProps {
     title?: string,
@@ -13,34 +15,43 @@ export interface BlockProps {
 }
 
 const Block = ({ title, subtitle, text, images, alt }: BlockProps) => {
-    const [pagination, setPagination] = useState(0)
-    const imageIndex = wrap(0, images.length, pagination)
+    const [[page, direction], setPagination] = useState([0, 0])
+    const imageIndex = wrap(0, images.length, page)
+    const [intervalId, setIntervalId] = useState(null);
     
+    const paginate = (newDirection: number) => {
+        setPagination([page + newDirection, newDirection]);
+    };
+
     const variants: Variants = {
-        initial: {
-            opacity: 0.6,
-            x: -500
+        initial: (direction: number) => {
+            return {
+                opacity: 0.6,
+                x: direction > 0 ? 500 : -500
+            }
         },
         animate: {
             zIndex: 1,
             opacity: 1,
             x: 0
         },
-        exit: {
-            zIndex: 0,
-            opacity: 0.3,
-            x: 500
+        exit: (direction: number) => {
+            return {
+                zIndex: 0,
+                opacity: 0.3,
+                x: direction < 0 ? 500 : -500
+            }
         }
     }
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
-            setPagination(pagination => pagination + 1)
-        }, 5000)
-      return () => {
-          clearInterval(intervalId)
-      }
-    }, [])
+        intervalId && clearInterval(intervalId);
+        const newIntervalId = setInterval(() => {
+            paginate(1);
+        }, 5000);
+        setIntervalId(newIntervalId);
+        return () => clearInterval(newIntervalId);
+    }, [page]);
     
 
     return (
@@ -48,12 +59,13 @@ const Block = ({ title, subtitle, text, images, alt }: BlockProps) => {
             <div className={styles.root} >
                 <div className={styles.imgContainer}>
                     <div className={styles.img}>
-                        <AnimatePresence initial={false}>
+                        <AnimatePresence initial={false} custom={direction}>
                             <m.img 
-                                key={pagination}
+                                key={page}
                                 src={images[imageIndex]}
                                 alt={alt}
                                 variants={variants}
+                                custom={direction}
                                 initial='initial'
                                 animate='animate'
                                 exit='exit'
@@ -61,9 +73,14 @@ const Block = ({ title, subtitle, text, images, alt }: BlockProps) => {
                                     x: { duration: 0.4, type: 'keyframes', ease: 'easeInOut' },
                                     opacity: { duration: 0.2, type: 'keyframes' }
                                 }}
-                                onClick={(): void => setPagination(pagination + 1)}
                             />
                         </AnimatePresence>
+                        <div className={`${styles.btn} ${styles.btnLeft}`} onClick={(): void => paginate(-1)} >
+                            <KeyboardArrowLeftIcon/>
+                        </div>
+                        <div className={`${styles.btn} ${styles.btnRight}`} onClick={(): void => paginate(1)} >
+                            <KeyboardArrowRightIcon/>
+                        </div>
                     </div>
                 </div>
                 <div className={styles.textContainer}>
