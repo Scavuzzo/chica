@@ -32,7 +32,7 @@ const MenuNav = () => {
                 }
             `}
         >
-            <Link href='/#visitanos'>
+            <Link href='/#visitanos' scroll={false} >
                 Visitanos
             </Link>
             <Link href='https://wa.me/5493416696995' target='_blank' rel="noreferrer">

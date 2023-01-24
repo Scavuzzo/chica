@@ -9,14 +9,14 @@ import { useContext } from 'react';
 import { motion, Variants } from 'framer-motion';
 import { KitchenLogo } from 'components/Logos/Logos';
 
-interface NavProps {
-  extended?: boolean;
-  color?: 'primary' | 'secondary';
-  className?: string;
-  hide?: boolean;
-}
+// interface NavProps {
+//   extended?: boolean;
+//   color?: 'primary' | 'secondary';
+//   className?: string;
+//   hide?: boolean;
+// }
 
-export const MenuOpen = (props: NavProps): JSX.Element => {
+export const MenuOpen = (): JSX.Element => {
   const { menuOpen, setMenuOpen } = useContext(ViewContext);
 
   const menu: Variants = {
@@ -80,26 +80,26 @@ export const MenuOpen = (props: NavProps): JSX.Element => {
             </Link>
           ))}
         </Stack>
-        <a href='tel:+5493416696995'>
+        <Link href='tel:+5493416696995'>
           <Typography className={styles.phone} variant='body1' align='center'>
             +54 9 341 669 6995
           </Typography>
-        </a>
+        </Link>
         <div className={styles.social}>
           <div>
-            <a href='https://wa.me/5493416696995' target='_blank' rel="noreferrer" >
+            <Link href='https://wa.me/5493416696995' target='_blank' rel="noreferrer" >
               <WhatsApp />
-            </a>
+            </Link>
           </div>
           <div>
-            <a href='https://www.linkedin.com/company/chica-kitchen/?originalSubdomain=ar' target='_blank' rel="noreferrer" >
+            <Link href='https://www.linkedin.com/company/chica-kitchen/?originalSubdomain=ar' target='_blank' rel="noreferrer" >
               <LinkedIn />
-            </a>
+            </Link>
           </div>
           <div>
-            <a href='https://www.instagram.com/chicakittchen/' target='_blank' rel="noreferrer" >
+            <Link href='https://www.instagram.com/chicakittchen/' target='_blank' rel="noreferrer" >
               <Instagram />
-            </a>
+            </Link>
           </div>
         </div>
       </Stack>

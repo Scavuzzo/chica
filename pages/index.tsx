@@ -2,11 +2,12 @@ import Head from 'next/head'
 import styles from 'styles/Home.module.scss'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { Stack, useMediaQuery, useTheme, responsiveFontSizes } from '@mui/material';
+import { Stack, useMediaQuery, useTheme } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { domAnimation, LazyMotion, m, Variants } from 'framer-motion';
 import { KitchenLogo } from 'components/Logos/Logos';
 import Block from 'components/Block.component';
+import GoogleMaps from 'components/GoogleMaps/GoogleMaps.component';
 
 export async function getStaticProps({ locale }:any) {
   
@@ -161,16 +162,8 @@ export default function Home() {
           </div>
           <div className={styles.contactGridItem} >
             <div className={styles.contactTextContainer}>
-              <div className={styles.contactIframeContainer}>
-                <iframe
-                  src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8194.657903171781!2d-60.66756197388185!3d-32.945888563765145!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd98f7dc4b932bceb!2sChica%20Kitchen!5e0!3m2!1ses!2sar!4v1668093278580!5m2!1ses!2sar'
-                  width='100%'
-                  height='100%'
-                  style={{ border: 0 }}
-                  allowFullScreen={true}
-                  loading='lazy'
-                  title='GoogleMaps'
-                ></iframe>
+              <div className={styles.contactIframeContainer} >
+                <GoogleMaps src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8194.657903171781!2d-60.66756197388185!3d-32.945888563765145!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd98f7dc4b932bceb!2sChica%20Kitchen!5e0!3m2!1ses!2sar!4v1668093278580!5m2!1ses!2sar' />
               </div>
               <Typography variant='body2'>
                 San Martín 834, Rosario, Santa Fe.
