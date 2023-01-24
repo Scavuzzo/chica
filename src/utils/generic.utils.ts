@@ -1,4 +1,4 @@
-export type ValueChecker = <T extends unknown>(value: T) => boolean;
+export type ValueChecker = <T>(value: T) => boolean;
 
 const defaultChecker: ValueChecker = (value) => {
   return value !== undefined && value !== null && value !== '';
@@ -8,7 +8,7 @@ const defaultChecker: ValueChecker = (value) => {
  * Validate if value is defined. It will check if value is different than undefined, null or empty string.
  * @param value value to validate if is defined
  */
-export function def<T extends unknown>(
+export function def<T>(
   value: T,
   valueChecker: ValueChecker = defaultChecker,
 ): boolean {

@@ -8,7 +8,7 @@ import { css } from '@mui/material';
 export interface PopUpProps {
   open?: boolean;
   children?: ReactNode | string;
-  onClosePopUp?: (event?: any, reason?: any) => void;
+  onClosePopUp?: (event?: unknown, reason?: unknown) => void;
   onSubmit?: () => void;
   closeIcon?: boolean;
 }

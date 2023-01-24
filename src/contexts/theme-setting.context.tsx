@@ -12,7 +12,7 @@ export const AppThemeProvider = ({
   children: JSX.Element;
 }): JSX.Element => {
   const { resolvedTheme } = useTheme();
-  const [paletteMode, setPaletteMode] = useState<PaletteMode>(resolvedTheme === 'light' ? 'light' : 'dark');
+  const [ , setPaletteMode] = useState<PaletteMode>(resolvedTheme === 'light' ? 'light' : 'dark');
 
   useEffect(() => {
     resolvedTheme === "light"

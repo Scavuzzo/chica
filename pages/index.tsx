@@ -7,7 +7,6 @@ import Typography from '@mui/material/Typography';
 import { domAnimation, LazyMotion, m, Variants } from 'framer-motion';
 import { KitchenLogo } from 'components/Logos/Logos';
 import Block from 'components/Block.component';
-import { BlockProps } from '../src/components/Block.component';
 
 export async function getStaticProps({ locale }:any) {
   
@@ -40,7 +39,7 @@ export const text: Variants = {
   animate: { opacity: 1, transition: { type: 'tween', duration: .3 } }
 }
 
-export default function Home(cafe: BlockProps) {
+export default function Home() {
   const { t } = useTranslation()
   const theme = useTheme()
   const notTablet = useMediaQuery(theme.breakpoints.up('lg'))

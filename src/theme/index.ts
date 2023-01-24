@@ -1,12 +1,13 @@
 import { Barlow } from '@next/font/google';
 import localFont from '@next/font/local'
-import { css, withStyles } from '@mui/material';
-import { experimental_extendTheme as extendTheme, responsiveFontSizes } from '@mui/material';
+import { css } from '@mui/material';
+import { experimental_extendTheme as extendTheme } from '@mui/material';
 
 export const barlow = Barlow({
   weight: ['200', '300', '400', '500', '700'],
   display: 'swap',
   fallback: ['sans-serif', 'Helvetica', 'Arial'],
+  subsets: ['latin', 'latin-ext']
 });
 
 export const ramaGothic = localFont({

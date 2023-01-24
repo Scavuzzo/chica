@@ -4,11 +4,10 @@ import styles from 'styles/Button.module.scss'
 
 interface ButtonProps{
     children: string,
-    href?: string,
     onClick?: () => void
 }
 
-const Button = ({children, onClick, href}: ButtonProps) => {
+const Button = ({children, onClick }: ButtonProps) => {
   return (
     <MuiButton className={styles.btn} onClick={onClick}>
       {children}

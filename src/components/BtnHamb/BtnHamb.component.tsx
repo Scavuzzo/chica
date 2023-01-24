@@ -4,12 +4,12 @@ import { LazyMotion, domAnimation, m, Variants } from 'framer-motion';
 import { css } from '@mui/material';
 import { MenuOpen } from 'components/BtnHamb/MenuOpen.component';
 
-interface BtnHambProps {
-  open?: boolean;
-  color?: string;
-}
+// interface BtnHambProps {
+//   open?: boolean;
+//   color?: string;
+// }
 
-export const BtnHamb = (props: BtnHambProps): JSX.Element => {
+export const BtnHamb = (): JSX.Element => {
   const { menuOpen, setMenuOpen } = useContext(ViewContext);
 
   const transitions = {

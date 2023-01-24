@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react'
 import Button from 'components/Button.component';
 import { domAnimation, LazyMotion, m, useTransform, useScroll } from 'framer-motion';
-import { Stack, css } from '@mui/material';
+import { css } from '@mui/material';
 import { BARLOW } from 'theme'
 
 
@@ -32,9 +32,9 @@ const MenuNav = () => {
                 }
             `}
         >
-            <a href='/#visitanos' >
+            <Link href='/#visitanos'>
                 Visitanos
-            </a>
+            </Link>
             <Link href='https://wa.me/5493416696995' target='_blank' rel="noreferrer">
                 <Button>
                     Reserva

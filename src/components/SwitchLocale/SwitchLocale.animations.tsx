@@ -6,7 +6,7 @@ export const variants: Variants = {
         display: 'flex'
     },
     closed: {
-        transition: { staggerChildren: 0.1, staggerDirection: -1, delayChildren: 0.1, when: 'afterChildren' },
+        transition: { staggerChildren: 0.1, staggerDirection: -1, delayChildren: 0.1, when:'afterChildren' },
         display: 'none'
     }
 }

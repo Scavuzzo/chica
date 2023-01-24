@@ -3,7 +3,6 @@ import { useColorScheme, css } from '@mui/material';
 import { ReactNode } from 'react';
 import { MoonIcon } from './MoonIcon.component';
 import { SunIcon } from './SunIcon.component';
-import { motion, MotionValue } from 'framer-motion';
 
 export const SwitchPaletteMode = () => {
     const [icon, setIcon] = useState<ReactNode>(<SunIcon />)

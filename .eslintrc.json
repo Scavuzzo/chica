@@ -10,7 +10,7 @@
     "plugin:react/recommended",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
+    // "plugin:prettier/recommended",
     "next/core-web-vitals"
     // "prettier"
   ],
@@ -27,7 +27,7 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
-    "prettier/prettier": "error",
+    // "prettier/prettier": "error",
     "space-before-function-paren": "off",
     "react/prop-types": "off",
     "no-use-before-define": "off",

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
 import styles from 'styles/Block.module.scss'
 import Typography from '@mui/material/Typography';
@@ -24,7 +25,7 @@ const Block = ({ title, subtitle, text, images, alt }: BlockProps) => {
     };
 
     const variants: Variants = {
-        initial: (direction: number) => {
+        initial:(direction: number) => {
             return {
                 opacity: 0.6,
                 x: direction > 0 ? 500 : -500
@@ -35,7 +36,7 @@ const Block = ({ title, subtitle, text, images, alt }: BlockProps) => {
             opacity: 1,
             x: 0
         },
-        exit: (direction: number) => {
+        exit:(direction: number) => {
             return {
                 zIndex: 0,
                 opacity: 0.3,

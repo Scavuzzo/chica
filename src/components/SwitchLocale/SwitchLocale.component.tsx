@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Image from 'next/image';
 import styles from 'styles/SwitchLocale.module.scss'
-import LanguageIcon from '@mui/icons-material/Language';
 import { css } from '@mui/material';
 import { motion, useCycle } from 'framer-motion';
 import { variants, itemVariants, transition } from './SwitchLocale.animations';
