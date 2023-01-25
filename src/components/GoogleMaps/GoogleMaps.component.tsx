@@ -22,7 +22,7 @@ const GoogleMaps = ({src}: GoogleMapsProps) => {
   return (
     <>
       <Head>
-        <link rel="preload" href="/map-small.jpg" as="image" type="image/jpg" />
+        <link rel="prefetch" href="/map-small.jpg" as="image" type="image/jpg" />
       </Head>
       <div 
         ref={mapRef}
