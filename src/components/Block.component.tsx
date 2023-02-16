@@ -6,19 +6,27 @@ import { LazyMotion, m, domAnimation, AnimatePresence, Variants } from 'framer-m
 import { wrap } from 'popmotion'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import Image from 'next/dist/client/image';
+import { getStrapiMultiMedia } from 'lib/media';
 
 export interface BlockProps {
-    title?: string,
-    subtitle?: string,
-    text?: string,
-    images?: string[]
-    alt?: string
+    id: number;
+    createdAt: string;
+    description: string;
+    publishedAt: string;
+    subtitle: string;
+    title: string;
+    images: any;
+    updatedAt: string;
 }
 
-const Block = ({ title, subtitle, text, images, alt }: BlockProps) => {
+const Block = ({ title, subtitle, description, images }: BlockProps) => {
+    // const images = ['/block-cafe1.jpg', '/block-cafe2.jpg', '/block-cafe3.jpg']
+    // const images = Images.data
     const [[page, direction], setPagination] = useState([0, 0])
-    const imageIndex = wrap(0, images.length, page)
+    const imageIndex = wrap(0, images.data.length, page)
     const [intervalId, setIntervalId] = useState(null);
+    
     
     const paginate = (newDirection: number) => {
         setPagination([page + newDirection, newDirection]);
@@ -61,10 +69,8 @@ const Block = ({ title, subtitle, text, images, alt }: BlockProps) => {
                 <div className={styles.imgContainer}>
                     <div className={styles.img}>
                         <AnimatePresence initial={false} custom={direction}>
-                            <m.img 
+                            <m.div
                                 key={page}
-                                src={images[imageIndex]}
-                                alt={alt}
                                 variants={variants}
                                 custom={direction}
                                 initial='initial'
@@ -74,7 +80,9 @@ const Block = ({ title, subtitle, text, images, alt }: BlockProps) => {
                                     x: { duration: 0.4, type: 'keyframes', ease: 'easeInOut' },
                                     opacity: { duration: 0.2, type: 'keyframes' }
                                 }}
-                            />
+                            >
+                                <Image src={getStrapiMultiMedia(images.data[imageIndex])} alt={'alt'} width={600} height={600} />
+                            </m.div>
                         </AnimatePresence>
                         <div className={`${styles.btn} ${styles.btnLeft}`} onClick={(): void => paginate(-1)} >
                             <KeyboardArrowLeftIcon/>
@@ -85,11 +93,13 @@ const Block = ({ title, subtitle, text, images, alt }: BlockProps) => {
                     </div>
                 </div>
                 <div className={styles.textContainer}>
-                    <Typography className={styles.title} variant='h2' >{title}</Typography>
-                    {/* <Typography variant='body2' > De especialidad</Typography> */}
+                    <div className={styles.titlebox}>
+                        <Typography className={styles.title} variant='h2' >{title}</Typography>
+                        { subtitle && <Typography className={styles.subtitle} variant='h5' >{subtitle} </Typography> }
+                    </div>
                     <div className={styles.paragraph}>
-                        {
-                            text.split("/").map((p, i) => {
+                        { 
+                            description.split(/\r\n|\r|\n/,-1).map((p, i) => {
                                 return <Typography key={i} variant='body1'>{p}</Typography>
                             })
                         }

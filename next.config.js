@@ -7,6 +7,10 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    loader: 'default',
+    domains: ['localhost']
+  },
   i18n,
   webpack: (config, { isServer }) => {
     if (!isServer) {

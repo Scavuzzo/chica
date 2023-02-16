@@ -1,0 +1,99 @@
+@import './mixins';
+
+.about {
+  width: 100vw;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  @include breakpoint('phone') {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 60px;
+    margin-top: 60px;
+  }
+  @include breakpoint('desktop-lg') {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 100vh;
+  padding-top: 80px;
+  margin: 0;
+  gap: 100px;
+  }
+}
+.aboutImg {
+  img {
+    aspect-ratio: 6/4;
+    vertical-align: middle;
+    object-fit: cover;
+    width: 100%;
+    position: relative !important;
+  }
+}
+.aboutImgDown {
+  img {
+    width: 100%;
+    max-height: 230px;
+    aspect-ratio: 3/6;
+    object-fit: cover;
+    position: relative !important;
+  }
+  @include breakpoint('desktop-xl'){
+    max-height: 350px;
+    img {max-height: 350px;}
+  }
+}
+.aboutTextContainer {
+  @include breakpoint('phone') {
+    width: 50%;
+  }
+  @include breakpoint('desktop-lg') {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 30px;
+  }
+}
+.aboutText {
+  padding-inline: 30px;
+  & > p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  @include breakpoint('tablet') {
+    margin-bottom: 20px;
+  }
+  @include breakpoint('desktop-lg') {
+    max-width: 420px;
+    margin: auto;
+    & p {
+    font-size: 14px;
+    }
+  }
+  @include breakpoint('desktop-xl') {
+    // AGREGAR A TODAS LAS BODY
+    & p {
+      font-size: 17px;
+      letter-spacing: 0.3px;
+      line-height: 27px;
+    }
+  }
+}
+.aboutLogo {
+  width: 120px;
+  margin-bottom: 20px;
+  fill: var(--mui-palette-text-primary);
+  svg {
+    width: 100%;
+  }
+  @include breakpoint('desktop-lg') {
+  width: 140px;
+  }
+}
+.aboutLogoImgContainer {
+  @include breakpoint('phone') {
+    width: 50%;
+  }
+  @include breakpoint('desktop-xl') {
+    display: flex;
+    align-items: center;
+  }
+}

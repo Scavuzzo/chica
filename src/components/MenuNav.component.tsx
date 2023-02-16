@@ -8,8 +8,8 @@ import { BARLOW } from 'theme'
 
 const MenuNav = () => {
     const { scrollY } = useScroll()
-    const max = 280
-    const min = 150
+    const max = 400
+    const min = 200
     const opacity = useTransform(
         scrollY,
         [min, max],

@@ -6,14 +6,14 @@ import { useTheme, useMediaQuery } from '@mui/material';
 import { ChicaLogo } from './Logos/Logos';
 import { BtnHamb } from './BtnHamb/BtnHamb.component';
 import MenuNav from './MenuNav.component';
-import { text } from '../../pages/index';
+import { text } from 'components/Hero.component';
 
 const Header = () => {
   const theme = useTheme()
   const mobile = useMediaQuery(theme.breakpoints.down('lg'));
   const { scrollY, scrollYProgress} = useScroll()
-  const max = 350
-  const min = 150
+  const max = 400
+  const min = 200
   const height = useTransform(
     scrollY,
     [min, max],

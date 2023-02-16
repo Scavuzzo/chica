@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 
 interface ImgProps {
@@ -12,13 +13,7 @@ const Img = ({
 }: ImgProps) => {
 
     return (
-        <picture>
-            <source media='(min-width: 768px)' srcSet={require(`images/home-contact1.jpg?webp`)} type="image/webp" />
-            <source media='(min-width: 768px)' srcSet={require(`images/home-contact1.jpg?webp`)} type="image/webp" />
-            <source media='(min-width: 768px)' srcSet={require('images/home-contact1.jpg')} type="image/jpeg" />
-            <source media='(max-width: 767px)' srcSet={require('../../images/home-contact1.jpg')} type="image/jpeg" />
-            <img src={require('images/home-contact1.jpg')} alt={alt} loading={loading} />
-        </picture>
+        <Image src={'/home-contact1.jpg'} alt='lalala' fill/>
     )
 }
 

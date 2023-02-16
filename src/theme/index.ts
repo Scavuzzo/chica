@@ -191,9 +191,9 @@ export const theme = extendTheme({
       lineHeight: '42px',
     },
     h5: {
-      fontFamily: RAMA_GOTHIC,
+      fontFamily: BARLOW,
       fontSize: '24px',
-      lineHeight: '32px',
+      lineHeight: '24px',
     },
     h6: {
       fontFamily: RAMA_GOTHIC,
