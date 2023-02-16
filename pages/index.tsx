@@ -31,8 +31,6 @@ export default function Home({  home }: { home: HomeProps }) {
   const hero: HeroProps = home.attributes.hero
   const about = home.attributes.about
   const contact = home.attributes.contact
-  console.log(wp);
-  
 
   return (
     <div className={styles.container}>
