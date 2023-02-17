@@ -102,9 +102,19 @@
         align-items: center;
     }
 }
+.titlebox {
+  margin-bottom: 15px;
+}
 .title {
-  margin-bottom: 10px;
   line-height: 60px;
+}
+.subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 5px;
+  @include breakpoint('tablet'){
+    font-size: 20px;
+  }
 }
 .textContainer {
   padding-inline: 30px;
@@ -128,7 +138,10 @@
   }
   @include breakpoint('desktop-xl'){
     height: 600px;
-    & p {
+    h2 {
+      max-width: 210px;
+    }
+    p {
       font-size: 17px;
       letter-spacing: 0.3px;
       line-height: 27px;

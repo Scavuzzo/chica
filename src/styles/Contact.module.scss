@@ -1,0 +1,97 @@
+@import './mixins';
+
+.contact {
+  width: 100vw;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  
+  @include breakpoint('phone') {
+    width: 100%;
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
+  
+  @include breakpoint('desktop-lg') {
+    gap: 0;
+    height: calc(100vh - 70px);
+    padding-top: 60px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+  }
+}
+
+.contactGridItem {
+  padding-top: 0;
+  width: 100%;
+
+  @include breakpoint('phone') {
+    width: 50%;
+  }
+
+  @include breakpoint('tablet') {
+    display: flex;
+  }
+
+  @include breakpoint('desktop-lg') {
+    justify-content: center;
+  }
+}
+
+.contactImg {
+  flex-basis: 450px;
+  & img {
+    position: relative !important;
+    aspect-ratio: 1/1;
+    vertical-align: middle;
+    object-fit: cover;
+    width: 100%;
+  }
+  @include breakpoint('desktop-xl'){
+    flex-basis: 600px;
+  }
+}
+
+.contactTextContainer {
+  width: 100%;
+  text-align: left;
+  height: auto;
+  padding-inline: 30px;
+  margin-bottom: 20px;
+
+  & p {
+    line-height: 24px;
+    text-decoration: none;
+    color: var(--mui-palette-text-primary);
+  }
+
+  @include breakpoint('tablet') {
+    max-width: 450px;
+    padding-inline: 0;
+
+    & p {
+      line-height: 34px;
+    }
+  }
+  @include breakpoint('desktop-xl') {
+    max-width: 600px;
+    padding-inline: 0;
+
+    & p {
+      line-height: 34px;
+    }
+  }
+}
+
+.contactIframeContainer {
+  width: 100%;
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+  @include breakpoint('tablet') {
+    padding-top: 60%;
+  }
+}
