@@ -6,6 +6,7 @@ import { LazyMotion, m, domAnimation, AnimatePresence, Variants } from 'framer-m
 import { wrap } from 'popmotion'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import Image from 'next/image';
 
 export interface BlockProps {
     title?: string,
@@ -61,10 +62,8 @@ const Block = ({ title, subtitle, text, images, alt }: BlockProps) => {
                 <div className={styles.imgContainer}>
                     <div className={styles.img}>
                         <AnimatePresence initial={false} custom={direction}>
-                            <m.img 
+                            <m.div 
                                 key={page}
-                                src={images[imageIndex]}
-                                alt={alt}
                                 variants={variants}
                                 custom={direction}
                                 initial='initial'
@@ -74,7 +73,9 @@ const Block = ({ title, subtitle, text, images, alt }: BlockProps) => {
                                     x: { duration: 0.4, type: 'keyframes', ease: 'easeInOut' },
                                     opacity: { duration: 0.2, type: 'keyframes' }
                                 }}
-                            />
+                            >
+                                <Image src={images[imageIndex]} alt={alt} fill />
+                            </m.div>
                         </AnimatePresence>
                         <div className={`${styles.btn} ${styles.btnLeft}`} onClick={(): void => paginate(-1)} >
                             <KeyboardArrowLeftIcon/>

@@ -8,7 +8,7 @@ import { domAnimation, LazyMotion, m, Variants } from 'framer-motion';
 import { KitchenLogo } from 'components/Logos/Logos';
 import Block from 'components/Block.component';
 import GoogleMaps from 'components/GoogleMaps/GoogleMaps.component';
-import Img from 'components/Img/Img.component';
+import Image from 'next/image';
 
 export async function getStaticProps({ locale }:any) {
   
@@ -145,7 +145,7 @@ export default function Home() {
                   <KitchenLogo />
                 </div>
                 <div className={styles.aboutImg}>
-                  <img src='/home-about2.jpg' alt='Chica Local 3' />
+                  <Image src='/home-about2.jpg' alt='Chica Local 3' fill/>
                 </div>
               </Stack>
             </div>
@@ -159,7 +159,7 @@ export default function Home() {
         <div className={styles.contact} id='visitanos'>
           <div className={styles.contactGridItem} >
             <div className={styles.contactImg}>
-                <Img alt='Chica Local 4' loading='lazy' />
+              <Image src='/home-contact1.jpg' alt='Chica Local 4' fill />
             </div>
           </div>
           <div className={styles.contactGridItem} >
