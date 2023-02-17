@@ -74,12 +74,8 @@
       width: auto !important;
     }
   }
-  
-  // @include breakpoint('desktop-lg') {
-  //   & img {
-  //   }
-  // }
-    @include breakpoint('desktop-xl') {
+
+  @include breakpoint('desktop-xl') {
     & img {
       max-height: 280px;
     }
@@ -98,14 +94,12 @@
     position: relative !important;
     object-fit: cover;
   }
-  @include breakpoint('tablet') {
+  @include breakpoint('desktop-lg') {
+    max-height: 35vh;
     & img {
       aspect-ratio: 16/9;
       width: auto !important;
     }
-  }
-  @include breakpoint('desktop-lg') {
-    max-height: 35vh;
   }
 }
 
