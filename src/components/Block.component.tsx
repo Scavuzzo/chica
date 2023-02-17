@@ -26,7 +26,7 @@ const Block = ({ title, subtitle, text, images, alt }: BlockProps) => {
     };
 
     const variants: Variants = {
-        initial:(direction: number) => {
+        initial: (direction: number) => {
             return {
                 opacity: 0.6,
                 x: direction > 0 ? 500 : -500
@@ -37,7 +37,7 @@ const Block = ({ title, subtitle, text, images, alt }: BlockProps) => {
             opacity: 1,
             x: 0
         },
-        exit:(direction: number) => {
+        exit: (direction: number) => {
             return {
                 zIndex: 0,
                 opacity: 0.3,
@@ -74,7 +74,7 @@ const Block = ({ title, subtitle, text, images, alt }: BlockProps) => {
                                     opacity: { duration: 0.2, type: 'keyframes' }
                                 }}
                             >
-                                <Image src={images[imageIndex]} alt={alt} fill />
+                                <Image src={images[imageIndex]} alt={alt} width={600} height={600} />
                             </m.div>
                         </AnimatePresence>
                         <div className={`${styles.btn} ${styles.btnLeft}`} onClick={(): void => paginate(-1)} >
