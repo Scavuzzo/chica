@@ -86,8 +86,10 @@ const Block = ({ title, subtitle, text, images, alt }: BlockProps) => {
                     </div>
                 </div>
                 <div className={styles.textContainer}>
-                    <Typography className={styles.title} variant='h2' >{title}</Typography>
-                    {/* <Typography variant='body2' > De especialidad</Typography> */}
+                    <div className={styles.titlebox}>
+                        <Typography className={styles.title} variant='h2' >{title}</Typography>
+                        {subtitle && <Typography className={styles.subtitle} variant='h5' >{subtitle} </Typography>}
+                    </div>                    {/* <Typography variant='body2' > De especialidad</Typography> */}
                     <div className={styles.paragraph}>
                         {
                             text.split("/").map((p, i) => {

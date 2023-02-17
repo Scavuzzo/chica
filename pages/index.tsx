@@ -47,8 +47,6 @@ export const text: Variants = {
 export default function Home() {
   const { t } = useTranslation()
   const theme = useTheme()
-  const notTablet = useMediaQuery(theme.breakpoints.up('lg'))
-  const notMobile = useMediaQuery(theme.breakpoints.up('sm'))
   const cafeImages = ['/block-cafe1.jpg', '/block-cafe2.jpg', '/block-cafe3.jpg']
   const cocinaImages = ['/block-cocina1.jpg', '/block-cocina2.jpg', '/block-cocina3.jpg']
   const cocktailImages = ['/block-cocktail1.jpg', '/block-cocktail2.jpg', '/block-cocktail3.jpg']
@@ -69,9 +67,9 @@ export default function Home() {
         {/* ABOUT */}
           <About />
         {/* BLOCKS */}
-        <Block title={t('block:cafeTitle')} text={t('block:cafeText')} images={cafeImages} alt='Café de especialidad' />
-        <Block title={t('block:cocinaTitle')} text={t('block:cocinaText')} images={cocinaImages} alt='Cocina vegana, vegetariana' />
-        <Block title={t('block:cocktailTitle')} text={t('block:cocktailText')} images={cocktailImages} alt='Cócteles de autor' />
+          <Block title={t('block:cafeTitle')} subtitle={t('block:cafeSubtitle')} text={t('block:cafeText')} images={cafeImages} alt='Café de especialidad' />
+          <Block title={t('block:cocinaTitle')} subtitle={t('block:cocinaSubtitle')} text={t('block:cocinaText')} images={cocinaImages} alt='Cocina vegana, vegetariana' />
+          <Block title={t('block:cocktailTitle')} subtitle={t('block:cocktailSubtitle')} text={t('block:cocktailText')} images={cocktailImages} alt='Cócteles de autor' />
         {/* CONTACT */}
           <Contact />
       </LazyMotion>
