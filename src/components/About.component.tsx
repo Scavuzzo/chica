@@ -22,21 +22,21 @@ const About = ({ description, imageLeft, imageRight }: AboutProps) => {
             <div className={styles.aboutTextContainer}>
                 <div className={styles.aboutText}>
                     <Typography variant='body1' fontWeight='400'>
-                        {' '}
-                        Desde Chica Eventos ofrecemos un servicio de cocteleria premium
-                        adaptado a la necesidad de cada cliente.{' '}
+                        {' '} Cantina moderna que ofrece comida, cafetería y coctelería vegetariana, vegana y sin TACC.{' '}
                     </Typography>
                     <Typography variant='body1' fontWeight='400'>
                         {' '}
-                        Nuestra calidad nos respalda, la hospitalidad nos destaca y estamos
-                        en constante busqueda de innovacion para seguir ofreciendo un
-                        distinguido servicio.
+                        Un espacio dinámico, lleno de vida donde recibimos a todas las personas que quieran visitarnos (y a sus mascotas también).
                     </Typography>
                     <Typography variant='body1' fontWeight='400'>
                         {' '}
-                        Con mas de 4 anos de experiencia, te dejamos con la tranquilidad de
-                        delegar y confiar en nosotros para resolver tu evento.
-                    </Typography>                </div>
+                        Un oasis en el centro de Rosario, donde predomina la frescura, los colores, y la luz natural.
+                    </Typography>
+                    <Typography variant='body1' fontWeight='400'>
+                        {' '}
+                        Nuestro equipo está cerca, para atenderte y ayudarte en lo que necesites, visitanos!
+                    </Typography>
+                </div>
                 <div className={styles.aboutImgDown}>
                     {/* NOT TABLET */}
                     {notTablet && <Image src={'/home-about1.jpg'} alt='Chica Local 2' width={880} height={350} />}
