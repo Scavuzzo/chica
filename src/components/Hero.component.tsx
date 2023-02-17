@@ -24,7 +24,7 @@ const Hero = () => {
     const notTablet = useMediaQuery(theme.breakpoints.up('lg'))
 
     return (
-                <div className={styles.hero}>
+        <div className={styles.hero}>
           <div className={styles.heroImgUp}>
             <m.div className={styles.heroImg}
                 variants={imgUp}
@@ -32,7 +32,7 @@ const Hero = () => {
                 animate='animate'
                 transition={transition}
             >
-                <Image src={'/home-hero1.jpg'} alt='Chica Producto 1' fill />
+            <Image src={'/home-hero1.jpg'} alt='Chica Producto 1' fill priority sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </m.div>
           </div>
           <m.div
@@ -52,7 +52,7 @@ const Hero = () => {
               animate='animate'
               transition={transition}
             >
-              <Image src={'/home-hero2.jpg'} alt='Chica Local 1' fill />
+              <Image src={'/home-hero2.jpg'} alt='Chica Local 1' fill priority sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
             </m.div>
           </div>
             {

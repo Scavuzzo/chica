@@ -10,7 +10,7 @@ const Contact = () => {
       <div className={styles.contact} id='visitanos'>
           <div className={styles.contactGridItem} >
               <div className={styles.contactImg}>
-                  <Image src='/home-contact1.jpg' alt='Chica Local 4' fill />
+                  <Image src='/home-contact1.jpg' alt='Chica Local 4' fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
           </div>
           <div className={styles.contactGridItem} >

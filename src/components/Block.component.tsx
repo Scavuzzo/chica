@@ -74,7 +74,7 @@ const Block = ({ title, subtitle, text, images, alt }: BlockProps) => {
                                     opacity: { duration: 0.2, type: 'keyframes' }
                                 }}
                             >
-                                <Image src={images[imageIndex]} alt={alt} width={600} height={600} />
+                                <Image src={images[imageIndex]} alt={alt} width={600} height={600} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                             </m.div>
                         </AnimatePresence>
                         <div className={`${styles.btn} ${styles.btnLeft}`} onClick={(): void => paginate(-1)} >
@@ -96,6 +96,13 @@ const Block = ({ title, subtitle, text, images, alt }: BlockProps) => {
                         }
                     </div>
                 </div>
+            </div>
+            <div style={{display: 'none'}}>
+                {
+                    images.map((img, i) => {
+                        return <Image key={i} src={img} alt={alt} width={600} height={600} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                    })
+                }
             </div>
         </LazyMotion>
 
