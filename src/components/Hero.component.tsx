@@ -6,16 +6,16 @@ import Image from 'next/image';
 
 const transition = { type: 'tween', duration: .6 };
 const imgUp: Variants = {
-  initial: { right: '-40vw', opacity: 0 },
-  animate: { right: 0,opacity: 1 }
+  initial: { x: '40vw', opacity: 0 },
+  animate: { x: 0, opacity: 1 }
 }
 const imgDown: Variants = {
-  initial: { left: '-40vw', opacity: 0 },
-  animate: { left: 0,opacity: 1 }
+  initial: { x: '-40vw', opacity: 0 },
+  animate: { x: 0, opacity: 1 }
 }
 export const text: Variants = {
   initial: { opacity: 0 },
-  animate: { opacity: 1, transition: { type: 'tween', duration: .3 } }
+  animate: { opacity: 1, transition: { type: 'tween', duration: .9 } }
 }
 
 
