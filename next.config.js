@@ -8,6 +8,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const nextConfig = {
   reactStrictMode: true,
   i18n,
+  images: {
+    domains: ['https://chicakitchen.com']
+  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.module.rules.push({

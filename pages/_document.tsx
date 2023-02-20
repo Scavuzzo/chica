@@ -5,6 +5,7 @@ import createEmotionServer from '@emotion/server/create-instance';
 import { ramaGothic } from 'theme';
 import createEmotionCache from 'theme/createEmotionCache';
 import { getInitColorSchemeScript } from '@mui/material/styles';
+import Script from 'next/script';
 
 export default class MyDocument extends Document {
 
@@ -13,7 +14,6 @@ export default class MyDocument extends Document {
       <Html lang="es" style={{ scrollBehavior: 'smooth' }}>
         <Head>
           {/* PWA primary color */}
-          {/* <meta name="theme-color" content={theme.palette.primary.main} /> */}
           <link rel="shortcut icon" href="/favicon.ico" />
           <meta name="emotion-insertion-point" content="" />
           <link rel="canonical" href="https://chicakitchen.com/" />
@@ -23,22 +23,7 @@ export default class MyDocument extends Document {
           <meta property="og:description" content="Café, Cocina y Cócteles de autor." />
           <meta property="og:image" content="https://chicakitchen.com/home-about2.jpg" />
           <meta name="description" content="Café, cocina vegana/vegetariana y cocktelería de autor en la ciudad de Rosario"/>
-          <script type="application/ld+json">
-            {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Chica",
-              "url": "https://chicakitchen.com",
-              "logo": "https://chicakitchen.com/circle-logo.webp",
-              "sameAs": [
-                "https://www.linkedin.com/company/chica-kitchen/?originalSubdomain=ar"
-                "https://www.instagram.com/chicakittchen/"
-              ]
-            }
-          `}
-          </script>
-          {(this.props as any).emotionStyleTags}
+          {(this.props as any).emotionStyleTags}      
         </Head>
         <body className={ramaGothic.className}>
           {getInitColorSchemeScript()}

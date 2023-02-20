@@ -24,7 +24,6 @@ const MyApp = (props: MyAppProps): JSX.Element => {
       <CacheProvider value={emotionCache}>
         <Head>
           <meta name="viewport" content="initial-scale=1, width=device-width" />
-          {/* <link rel="stylesheet" href="styles/global.css" /> */}
         </Head>
         <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-LPGVJYHSM2" />
         <Script

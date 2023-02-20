@@ -102,7 +102,7 @@ const Block = ({ title, subtitle, text, images, alt }: BlockProps) => {
             <div style={{display: 'none'}}>
                 {
                     images.map((img, i) => {
-                        return <Image key={i} src={img} alt={alt} width={600} height={600} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                        return <Image loading='eager' priority key={i} src={img} alt={alt} width={600} height={600} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                     })
                 }
             </div>
