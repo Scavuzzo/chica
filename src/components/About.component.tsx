@@ -39,18 +39,18 @@ const About = ({ description, imageLeft, imageRight }: AboutProps) => {
                 </div>
                 <div className={styles.aboutImgDown}>
                     {/* NOT TABLET */}
-                    {notTablet && <Image src={'/home-about1.jpg'} alt='Chica Local 2' width={880} height={350} />}
+                    {notTablet && <Image src={'/home-about1.jpg'} alt='Chica Local 2' width={880} height={350} loading='lazy' sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />}
                 </div>
             </div>
             {notMobile &&
                 <div className={styles.aboutLogoImgContainer}>
                     {/* NOT MOBILE */}
-                    <Stack justifyContent='flex-start' >
+                    <Stack justifyContent='flex-start' className={styles.LogoImg} >
                         <div className={styles.aboutLogo}>
                             <KitchenLogo />
                         </div>
                         <div className={styles.aboutImg}>
-                            <Image src={'/home-about2.jpg'} alt='Chica Local 3' width={880} height={586.666666} />
+                            <Image src={'/home-about2.jpg'} alt='Chica Local 3' fill loading='lazy' sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                         </div>
                     </Stack>
                 </div>

@@ -1,0 +1,62 @@
+@import 'mixins';
+
+.img {
+    width: 100vw;
+    height: 100vw;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    img {
+        aspect-ratio: 1/1;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        }
+    @include breakpoint('phone'){
+      max-width: 300px;
+      max-height: 300px;
+    }
+    @include breakpoint('tablet') {
+        max-width: 400px;
+        max-height: 400px;
+    }
+    @include breakpoint('desktop-lg') {
+        max-width: 450px;
+        max-height: 450px;
+        margin-left: auto;
+        margin-bottom: 0;
+        padding-inline: 0;
+    }
+    @include breakpoint('desktop-xl'){
+        max-width: 600px;
+        max-height: 600px;
+    }
+}
+.sliderContainer {
+  position: relative;
+  &:hover {
+    .btn {
+      opacity: 1;
+    }
+  }
+}
+.btn {
+  position: absolute;
+  display: none;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  margin-block: auto;
+  z-index: 1000;
+  font-size: 60px;
+  cursor: pointer;
+  @include breakpoint('tablet'){
+      display: inline;
+  }
+}
+.btnRight {
+  right: 10px;
+}
+.btnLeft {
+  left: 10px;
+}

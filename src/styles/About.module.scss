@@ -33,7 +33,6 @@
   img {
     width: 100%;
     max-height: 230px;
-    aspect-ratio: 3/6;
     object-fit: cover;
     position: relative !important;
   }
@@ -49,7 +48,7 @@
   @include breakpoint('desktop-lg') {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     gap: 30px;
   }
 }
@@ -64,6 +63,7 @@
   @include breakpoint('desktop-lg') {
     max-width: 420px;
     margin: auto;
+    margin-top: 60px;
     & p {
     font-size: 14px;
     }
@@ -94,6 +94,12 @@
   }
   @include breakpoint('desktop-xl') {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
 }
+
+// .LogoImg {
+//   @include breakpoint('desktop-lg') {
+//     margin: 30px
+//   }
+// }

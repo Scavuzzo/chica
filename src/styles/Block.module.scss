@@ -96,6 +96,7 @@
     min-height: 100%;
     @include breakpoint('phone') {
         max-width: 50%;
+        justify-content: flex-end;
     }
     @include breakpoint('desktop-lg') {
         flex: 1;

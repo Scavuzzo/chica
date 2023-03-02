@@ -46,7 +46,8 @@ export default function Home() {
         <title>Chica</title>
         {/* PWA primary color */}
         <meta name="theme-color" content={theme.palette.primary.main} />
-        <meta name="description" content="Chica, café de especialidad, cocina vegana y vegetariana, cócteles de autor. Petfriendly. Rosario, Santa Fe, Argentina." />
+        <meta name="title" content="Chica Kitchen, café de especialidad, cocina vegana y vegetariana, cócteles de autor." /> 
+        <meta name="description" content="Cantina moderna que ofrece comida, cafetería y coctelería vegetariana, vegana y sin TACC. Rosario, Santa Fe, Argentina." />
         <link rel="icon" href="/favicon.ico" />
         <script type="application/ld+json">
           {JSON.stringify(organizationData)}
