@@ -45,7 +45,7 @@ const About = ({ description, imageLeft, imageRight }: AboutProps) => {
             {notMobile &&
                 <div className={styles.aboutLogoImgContainer}>
                     {/* NOT MOBILE */}
-                    <Stack justifyContent='flex-start' className={styles.LogoImg} >
+                    <Stack justifyContent='flex-start' className={styles.LogoImg} width={'100%'} >
                         <div className={styles.aboutLogo}>
                             <KitchenLogo />
                         </div>
