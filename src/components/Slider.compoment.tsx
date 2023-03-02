@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Keyboard, Autoplay } from 'swiper'
+import { Autoplay } from 'swiper'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import styles from 'styles/Slider.module.scss';
 import 'swiper/css';
@@ -41,7 +41,7 @@ const Slider = ({ images, alt }: Slider) => {
         >
         {
             images.map((image: any, i: number) => {
-                return <SwiperSlide key={i}> <Image src={images[i]} alt={alt} loading={'lazy'} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" /></SwiperSlide>
+                return <SwiperSlide key={i}> <Image src={images[i]} priority alt={alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" /></SwiperSlide>
             })
         }
             <PrevButton/>
