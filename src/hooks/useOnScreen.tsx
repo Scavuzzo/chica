@@ -14,9 +14,7 @@ export default function useOnScreen({ref, rootMargin = "0px"}: OnScreen) {
                 // Update our state when observer callback fires
                 if(entry.isIntersecting) {
                     setIntersecting(entry.isIntersecting);
-                    observer.unobserve(ref.current)
-                    console.log('una ve');
-                    
+                    observer.unobserve(ref.current)                   
                 }
             },
             {
