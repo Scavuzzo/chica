@@ -25,15 +25,16 @@
     "experimentalDecorators": true,
     "jsx": "preserve",
     "jsxImportSource": "@emotion/react",
-    "incremental": true
+    "incremental": true,
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "src"
-, "next-sitemap.config.js", "next-sitemap.config.js"  ],
+, "next-sitemap.config.js", "next-sitemap.config.js" ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "node_modules/intersection-observer/**/*"
   ]
 }

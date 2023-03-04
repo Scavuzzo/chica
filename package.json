@@ -25,6 +25,7 @@
     "axios": "^1.2.2",
     "framer-motion": "^8.2.0",
     "i18next": "^22.4.6",
+    "intersection-observer": "^0.12.2",
     "luxon": "^3.2.0",
     "next": "latest",
     "next-i18next": "^13.0.2",

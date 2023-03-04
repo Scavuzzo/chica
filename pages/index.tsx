@@ -46,24 +46,25 @@ export default function Home() {
         <title>Chica</title>
         {/* PWA primary color */}
         <meta name="theme-color" content={theme.palette.primary.main} />
-        <meta name="title" content="Chica Kitchen, café de especialidad, cocina vegana y vegetariana, cócteles de autor." /> 
-        <meta name="description" content="Cantina moderna que ofrece comida, cafetería y coctelería vegetariana, vegana y sin TACC. Rosario, Santa Fe, Argentina." />
+        <meta name="description" content="Cantina moderna que ofrece cafetería y coctelería de autor, comida vegetariana, vegana y sin TACC. Petfrinedly Rosario, Santa Fe, Argentina." />
         <link rel="icon" href="/favicon.ico" />
         <script type="application/ld+json">
           {JSON.stringify(organizationData)}
         </script>
+        <meta name="keywords" content="Chica, Kitchen, Cocina, Vegana, Vegetariana, Cafe, Cocteles, Petfriendly, Rosario, Comida, Sin TACC "/>
+        <meta name='author' content='Chica Kitchen'/>
       </Head>
       <LazyMotion features={domAnimation}>
-        {/* HERO */}
+      {/* HERO */}
         <Hero />
-        {/* ABOUT */}
-          <About />
-        {/* BLOCKS */}
-          <Block title={t('block:cafeTitle')} subtitle={t('block:cafeSubtitle')} text={t('block:cafeText')} images={cafeImages} alt='Café de especialidad' />
-          <Block title={t('block:cocinaTitle')} subtitle={t('block:cocinaSubtitle')} text={t('block:cocinaText')} images={cocinaImages} alt='Cocina vegana, vegetariana' />
-          <Block title={t('block:cocktailTitle')} subtitle={t('block:cocktailSubtitle')} text={t('block:cocktailText')} images={cocktailImages} alt='Cócteles de autor' />
-        {/* CONTACT */}
-          <Contact />
+      {/* ABOUT */}
+        <About />
+      {/* BLOCKS */}
+        <Block title={t('block:cafeTitle')} subtitle={t('block:cafeSubtitle')} text={t('block:cafeText')} images={cafeImages} alt='Café de especialidad' />
+        <Block title={t('block:cocinaTitle')} subtitle={t('block:cocinaSubtitle')} text={t('block:cocinaText')} images={cocinaImages} alt='Cocina vegana, vegetariana' />
+        <Block title={t('block:cocktailTitle')} subtitle={t('block:cocktailSubtitle')} text={t('block:cocktailText')} images={cocktailImages} alt='Cócteles de autor' />
+      {/* CONTACT */}
+        <Contact />
       </LazyMotion>
     </div>
 

@@ -1,12 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import * as React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
 import { ramaGothic } from 'theme';
 import createEmotionCache from 'theme/createEmotionCache';
 import { getInitColorSchemeScript } from '@mui/material/styles';
-import Script from 'next/script';
-
 export default class MyDocument extends Document {
 
   render() {
@@ -22,7 +19,6 @@ export default class MyDocument extends Document {
           <meta property='og:title'content='Chica' />
           <meta property="og:description" content="Café, Cocina y Cócteles de autor." />
           <meta property="og:image" content="https://chicakitchen.com/home-about2.jpg" />
-          <meta name="description" content="Café, cocina vegana/vegetariana y cocktelería de autor en la ciudad de Rosario"/>
           {(this.props as any).emotionStyleTags}      
         </Head>
         <body className={ramaGothic.className}>

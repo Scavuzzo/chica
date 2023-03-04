@@ -23,7 +23,8 @@ const MyApp = (props: MyAppProps): JSX.Element => {
   return (
       <CacheProvider value={emotionCache}>
         <Head>
-          <meta name="viewport" content="initial-scale=1, width=device-width" />
+          <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, minimum-scale=0.7, user-scalable=no" />
+          <meta httpEquiv='X-UA-Compatible' content='ie=edge'/>
         </Head>
         <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-LPGVJYHSM2" />
         <Script
