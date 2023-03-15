@@ -169,26 +169,31 @@ export const theme = extendTheme({
       fontSize: '15px',
       lineHeight: '24px',
       textTransform: 'capitalize',
+      webkitFontSmoothing: 'antialiased'
     },
     h1: {
       fontFamily: RAMA_GOTHIC,
       fontSize: '80px',
       lineHeight: '112px',
+      webkitFontSmoothing: 'antialiased'
     },
     h2: {
       fontFamily: RAMA_GOTHIC,
       fontSize: '60px',
       lineHeight: '72px',
+      webkitFontSmoothing: 'antialiased'
     },
     h3: {
       fontFamily: RAMA_GOTHIC,
       fontSize: '48px',
       lineHeight: '56px',
+      webkitFontSmoothing: 'antialiased'
     },
     h4: {
       fontFamily: RAMA_GOTHIC,
       fontSize: '34px',
       lineHeight: '42px',
+      webkitFontSmoothing: 'antialiased'
     },
     h5: {
       fontFamily: BARLOW,
@@ -199,6 +204,7 @@ export const theme = extendTheme({
       fontFamily: RAMA_GOTHIC,
       fontSize: '20px',
       lineHeight: '32px',
+      webkitFontSmoothing: 'antialiased'
     },
   },
   shape: {

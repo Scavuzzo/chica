@@ -1,6 +1,8 @@
 ::-webkit-scrollbar {display: none;}
 html{
   scrollbar-width: none;
+  overflow-x: hidden;
+  width: 100vw;
 }
 input,
 textarea,

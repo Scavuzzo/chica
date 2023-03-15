@@ -35,8 +35,9 @@
   display: flex;
   text-align: center;
   padding-inline: 20px;
-  
+  // -webkit-text-size-adjust: 100%;
   & h1 {
+    -webkit-font-smoothing: antialiased;
     font-size: 60px;
     line-height: 62px;
     margin: auto;
