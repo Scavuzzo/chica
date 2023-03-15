@@ -11,6 +11,8 @@
     padding-inline: 30px;
     color: var(--mui-palette-text-primary);
     background-color: var(--mui-palette-primary-main);
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 .NavIcons {
     display: flex;
