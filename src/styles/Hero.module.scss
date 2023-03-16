@@ -64,6 +64,14 @@
   width: 100%;
   img {
     object-fit: cover;
+    object-position: 0px -150px;
+    @include breakpoint('phone') {
+      object-position: 0px -240px;
+    }
+    object-position: 0px -150px;
+    @include breakpoint('tablet') {
+      object-position: 0px -130px;
+    }
   }
   
   @include breakpoint('desktop-lg') {
