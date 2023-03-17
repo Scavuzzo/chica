@@ -20,7 +20,12 @@ export const RAMA_GOTHIC = ramaGothic.style.fontFamily;
 export const BARLOW = barlow.style.fontFamily;
 
 export const globalStyles = css`
-
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+    h1 {
+      color: blue;
+    }
+  }
 `
 
 export const theme = extendTheme({

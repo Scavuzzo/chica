@@ -3,7 +3,7 @@ import { Close } from '@mui/icons-material';
 import { Alert as AlertComponent, Button } from '@mui/material';
 import Snackbar from '@mui/material/Snackbar';
 import { FC } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'next-i18next';
 
 export type Variant = 'error' | 'warning' | 'success';
 
