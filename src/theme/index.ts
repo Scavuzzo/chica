@@ -11,9 +11,20 @@ export const barlow = Barlow({
 });
 
 export const ramaGothic = localFont({
-  src: '../fonts/RamaGothic.otf',
-  display: 'swap',
-  fallback: ['sans-serif', 'Helvetica', 'Arial'],
+  src: [
+    {
+      path: '../fonts/RamaGothicBold.otf',
+      weight: '800',
+      style: 'bold'
+    },
+    {
+      path: '../fonts/RamaGothicSemiBold.otf',
+      weight: '600',
+      style: 'semi-bold'
+    }
+],
+fallback: ['sans-serif', 'Helvetica', 'Arial'],
+display: 'swap',
 }) 
 
 export const RAMA_GOTHIC = ramaGothic.style.fontFamily;
