@@ -4,6 +4,7 @@ import { m, Variants } from 'framer-motion';
 import styles from 'styles/Hero.module.scss'
 import Image from 'next/image';
 
+
 const transition = { type: 'tween', duration: .6 };
 const imgUp: Variants = {
   initial: { x: '40vw', opacity: 0 },

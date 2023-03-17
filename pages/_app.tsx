@@ -40,7 +40,7 @@ const MyApp = (props: MyAppProps): JSX.Element => {
             });
           `,
           }}
-      />
+        />
         <AppThemeProvider>
           <ViewProvider>
             <Layout>
