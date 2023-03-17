@@ -23,7 +23,7 @@ export const globalStyles = css`
   @media only screen and (-webkit-min-device-pixel-ratio: 3),
   only screen and (min-device-width: 375px) and (max-device-width: 812px) {
     h1 {
-      color: blue;
+      font-weight: 600;
     }
   }
 `
@@ -180,7 +180,7 @@ export const theme = extendTheme({
       fontFamily: RAMA_GOTHIC,
       fontSize: '80px',
       lineHeight: '112px',
-      webkitFontSmoothing: 'antialiased'
+      webkitFontSmoothing: 'antialiased',
     },
     h2: {
       fontFamily: RAMA_GOTHIC,
