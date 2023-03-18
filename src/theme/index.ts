@@ -13,11 +13,6 @@ export const barlow = Barlow({
 export const ramaGothic = localFont({
   src: [
     {
-      path: '../fonts/RamaGothicBold.otf',
-      weight: '800',
-      style: 'bold'
-    },
-    {
       path: '../fonts/RamaGothicSemiBold.otf',
       weight: '600',
       style: 'semi-bold'
@@ -191,34 +186,40 @@ export const theme = extendTheme({
       fontFamily: RAMA_GOTHIC,
       fontSize: '80px',
       lineHeight: '112px',
+      fontWeight: 600
     },
     h2: {
       fontFamily: RAMA_GOTHIC,
-      fontSize: '60px',
+      fontSize: '50px',
       lineHeight: '72px',
+      fontWeight: 600
       
     },
     h3: {
       fontFamily: RAMA_GOTHIC,
       fontSize: '48px',
       lineHeight: '56px',
+      fontWeight: 600
       
     },
     h4: {
       fontFamily: RAMA_GOTHIC,
       fontSize: '34px',
       lineHeight: '42px',
+      fontWeight: 600
       
     },
     h5: {
       fontFamily: BARLOW,
       fontSize: '24px',
       lineHeight: '24px',
+      fontWeight: 600
     },
     h6: {
       fontFamily: RAMA_GOTHIC,
       fontSize: '20px',
       lineHeight: '32px',
+      fontWeight: 600
       
     },
   },
